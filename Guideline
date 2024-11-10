@@ -1,0 +1,26 @@
+(base) kingbuzzy@teamserver1:~/Projects/bri519_final_project$
+>> 기본적으로 다 여기서 실행하기!
+
+# 이미지 이름: final_project_image_szkim
+# 컨테이너 이름: szkim_FFT_LPF
+
+#### Dockerfile 수정 후 다시 이미지 생성 & 컨테이너 생성하기 ####
+
+1) sudo docker rmi -f final_project_image_szkim
+
+2) sudo docker rm szkim_FFT_LPF
+
+3) sudo docker build --no-cache -t final_project_image_szkim .
+
+4) sudo docker run --name szkim_FFT_LPF final_project_image_szkim
+(sudo docker run -d --name szkim_FFT_LPF final_project_image_szkim)
+
+5) sudo docker start szkim_FFT_LPF
+
+6) sudo docker exec -it szkim_FFT_LPF /bin/bash
+
+7) sudo docker cp szkim_FFT_LPF:/usr/src/app/chirp_fft_comparison.png .
+sudo docker cp szkim_FFT_LPF:/usr/src/app/chirp_spectrogram.png .
+sudo docker cp szkim_FFT_LPF:/usr/src/app/combined_tone_response.png .
+sudo docker cp szkim_FFT_LPF:/usr/src/app/tone_spectrograms.png .
+

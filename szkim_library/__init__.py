@@ -1,0 +1,1 @@
+# szkim_library/__init__.py
